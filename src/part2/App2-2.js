@@ -48,7 +48,8 @@ const App = () => {
   ]
 
   return (
-    courses.map((course) => <Course course={course}/>)
+    // keys 仅在周围数组的上下文中才有意义。
+    courses.map((course) => <Course key={course.id} course={course}/>)
   )
 }
 

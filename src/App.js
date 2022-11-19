@@ -9,6 +9,28 @@ import Part17 from './part1/App1-7'
 import Part21 from './part2/App2-1'
 import Part22 from './part2/App2-2'
 import Part23 from './part2/App2-3'
+import Part24 from './part2/App2-4'
+
+const notes = [
+  {
+    id: 1,
+    content: 'HTML is easy',
+    date: '2019-05-30T17:30:31.098Z',
+    important: true
+  },
+  {
+    id: 2,
+    content: 'Browser can execute only JavaScript',
+    date: '2019-05-30T18:39:34.091Z',
+    important: false
+  },
+  {
+    id: 3,
+    content: 'GET and POST are the most important methods of HTTP protocol',
+    date: '2019-05-30T19:20:14.298Z',
+    important: true
+  }
+]
 
 const Home = () => {
   return (
@@ -25,6 +47,7 @@ const Home = () => {
         <li><a href="/part2-1">练习2-1：Map</a></li>
         <li><a href="/part2-2">练习2-2：课程统计</a></li>
         <li><a href="/part2-3">练习2-3：表单</a></li>
+        <li><a href="/part2-4">练习2-4：电话簿</a></li>
       </ul>
     </div>
   )
@@ -43,9 +66,10 @@ const App = () => {
         <Route path="/part1-6" element={<Part16 />} />
         <Route path="/part1-7" element={<Part17 />} />
 
-        <Route path="/part2-1" element={<Part21 />} />
+        <Route path="/part2-1" element={<Part21 notes={notes} />} />
         <Route path="/part2-2" element={<Part22 />} />
-        <Route path="/part2-3" element={<Part23 />} />
+        <Route path="/part2-3" element={<Part23 notes={notes} />} />
+        <Route path="/part2-4" element={<Part24 />} />
         
       </Routes>
     </BrowserRouter>
